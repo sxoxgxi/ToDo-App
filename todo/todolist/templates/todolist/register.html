@@ -1,0 +1,22 @@
+{% extends "todolist/main.html" %}
+{% block content %}
+<div class="header-bar">
+    <h1>Create an account</h1>
+</div>
+<div class="card-body">
+    <form action="", method="POST">
+        {% csrf_token %}
+        <label>{{form.username.label}}</label>
+        {{form.username}}
+
+        <label>{{form.password1.label}}</label>
+        {{form.password1}}
+
+        <label>{{form.password2.label}}</label>
+        {{form.password2}}
+
+        <input style="margin-top:10px;" type="submit" value="Sign-Up" class="button">
+    </form>
+    <p>Already have an acccount? <a href="{% url 'sign-in' %}" class="linkkk">Login</a></p> 
+</div>
+{% endblock content %}

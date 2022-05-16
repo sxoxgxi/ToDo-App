@@ -1,0 +1,14 @@
+{% extends "todolist/main.html" %}
+{% block content %}
+<div class="header-bar">
+    <a href="{{request.META.HTTP_REFERER}}" class='fas'>&#xf3e5;</a>
+</div>
+<div class="card-body">
+    <form action="", method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Save" class="button">
+    </form>
+</div>
+
+{% endblock content %}
