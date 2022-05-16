@@ -1,3 +1,3 @@
 # ToDo-App
-Built with django
+Django
 class based view practice
